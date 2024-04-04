@@ -1,0 +1,65 @@
+@mixin li-before(
+  $height,
+  $lineHeight,
+  $size,
+  $bottom,
+  $beforeWidth,
+  $beforeHeight,
+  $beforeLineHeight,
+  $beforeSize
+) {
+  height: $height;
+  line-height: $lineHeight;
+  font-size: $size;
+  margin-bottom: $bottom;
+  &::before {
+    content: counter(item);
+    counter-increment: item;
+    width: $beforeWidth;
+    height: $beforeHeight;
+    border-radius: 100%;
+    border: 1px solid #e10838;
+    font-size: $beforeSize;
+    font-weight: 600;
+    line-height: $beforeLineHeight;
+    text-align: center;
+    position: absolute;
+    top: -3px;
+    left: -45px;
+  }
+}
+
+@mixin ol-video($width, $bottom) {
+  width: $width;
+  margin-bottom: $bottom;
+  @extend %ol-video-styles;
+}
+@mixin img-container($width, $right) {
+  width: $width;
+  margin-right: $right;
+}
+
+@mixin coin-item($width, $height, $top: 0, $right: 0, $bottom: 0, $left: 0) {
+  width: $width;
+  height: $height;
+
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+
+  @if $top != 0 {
+    bottom: auto;
+  }
+  @if $right != 0 {
+    left: auto;
+  }
+
+  @if $left != 0 {
+    right: auto;
+  }
+
+  @if $bottom != 0 {
+    top: auto;
+  }
+}

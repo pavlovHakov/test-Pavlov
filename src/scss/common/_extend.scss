@@ -1,0 +1,17 @@
+%li-styles {
+  width: 100%;
+  font-weight: 400;
+  position: relative;
+}
+
+%ol-video-styles {
+  height: auto;
+  counter-reset: item;
+}
+%img-styles {
+  width: 100%;
+  height: auto;
+}
+%coin-styles {
+  position: absolute;
+}

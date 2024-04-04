@@ -1,0 +1,40 @@
+.block-cross {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #8f8f8f;
+  position: absolute;
+  top: 14px;
+  left: 318px;
+  cursor: pointer;
+  display: none;
+  z-index: 10;
+  opacity: 0.8;
+  .wrapper-cross-relative {
+    width: 100%;
+    height: auto;
+    position: relative;
+    .elem-cross {
+      width: 100%;
+      height: 1.5px;
+      background: #8f8f8f;
+      position: absolute;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .elem-1 {
+      top: 8px;
+      transform: rotate(-140deg);
+    }
+    .elem-2 {
+      top: 8px;
+      transform: rotate(140deg);
+    }
+  }
+  &:hover {
+    opacity: 1;
+  }
+}
+.show-cross {
+  display: block;
+}

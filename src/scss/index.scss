@@ -1,0 +1,16 @@
+@import "./common/reset";
+@import "./common/variables";
+@import "./common/extend";
+@import "./common/mixin";
+@import "./components/content";
+@import "./components/blockContent";
+@import "./components/blockContentVideo";
+@import "./components/cross";
+
+.wrapper {
+  max-width: 1632px;
+  margin: 0 auto;
+  user-select: none;
+  font-family: $text-family;
+  color: $text-color;
+}

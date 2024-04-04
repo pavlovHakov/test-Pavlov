@@ -1,0 +1,213 @@
+.content {
+  width: 100%;
+  height: clamp(45rem, -16.547rem + 78.91vw, 63.938rem);
+  background: $bg no-repeat, 100% 100%;
+  background-size: cover;
+  padding-top: clamp(2.5rem, -2.172rem + 5.99vw, 3.938rem);
+  position: relative;
+  overflow: hidden;
+  .elem-none {
+    display: none;
+  }
+  .logotype {
+    width: clamp(4.063rem, -9.141rem + 16.93vw, 8.125rem);
+    height: auto;
+    margin: 0 auto;
+    img {
+      @extend %img-styles;
+    }
+  }
+  .coin_1 {
+    @include coin-item(
+      131px,
+      77px,
+      clamp(10.625rem, 3.516rem + 9.11vw, 12.813rem),
+      0,
+      0,
+      -31px
+    );
+    @extend %coin-styles;
+    img {
+      @extend %img-styles;
+    }
+  }
+  .coin_2 {
+    @include coin-item(123px, 89px, 234px, 202px, 0, 0);
+    @extend %coin-styles;
+    img {
+      @extend %img-styles;
+    }
+  }
+  .coin_3 {
+    @include coin-item(
+      86.05px,
+      89.86px,
+      0,
+      clamp(20.046rem, -0.728rem + 26.63vw, 26.438rem),
+      38px,
+      0
+    );
+    @extend %coin-styles;
+    img {
+      @extend %img-styles;
+    }
+  }
+  .coin_4 {
+    @include coin-item(
+      71.85px,
+      80.83px,
+      0,
+      0,
+      clamp(2.375rem, -7.781rem + 13.02vw, 5.5rem),
+      clamp(13.563rem, -34.172rem + 61.2vw, 28.25rem)
+    );
+    @extend %coin-styles;
+    img {
+      @extend %img-styles;
+    }
+  }
+}
+
+@media (max-width: 1248px) {
+  .content {
+    .coin_1 {
+      @include coin-item(
+        131px,
+        77px,
+        clamp(5.625rem, -11.042rem + 27.78vw, 10.625rem),
+        0,
+        0,
+        -31px
+      );
+    }
+
+    .coin_2 {
+      @include coin-item(123px, 89px, 291px, -65px, 0, 0);
+    }
+    .coin_3 {
+      @include coin-item(
+        86.05px,
+        89.86px,
+        0,
+        clamp(7.546rem, -34.119rem + 69.44vw, 20.045rem),
+        21.23px,
+        0
+      );
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .content {
+    height: 768px;
+    .coin_2 {
+      @include coin-item(123px, 89px, 291px, -40px, 0, 0);
+    }
+    .coin_3 {
+      @include coin-item(
+        86.05px,
+        89.86px,
+        0,
+        clamp(4.451rem, -7.926rem + 25.79vw, 7.546rem),
+        21.23px,
+        0
+      );
+    }
+    .coin_4 {
+      @include coin-item(71.85px, 80.83px, 0, 0, 24px, 58px);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    height: 960px;
+    .block-content {
+      width: 318px;
+      .block-text {
+        width: 391px;
+        .ol {
+          margin-left: -28px;
+        }
+      }
+      .block-img {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+    .coin_1 {
+      @include coin-item(
+        clamp(4.451rem, 1.155rem + 14.65vw, 8.188rem),
+        clamp(3.563rem, 2.46rem + 4.9vw, 4.813rem),
+        clamp(14.688rem, 12.206rem + 11.03vw, 17.5rem),
+        0,
+        0,
+        -31px
+      );
+    }
+    .coin_2 {
+      @include coin-item(
+        clamp(4.5rem, 1.688rem + 12.5vw, 7.688rem),
+        clamp(3.25rem, 1.21rem + 9.07vw, 5.563rem),
+        311px,
+        -40px,
+        0,
+        0
+      );
+    }
+    .coin_3 {
+      @include coin-item(86.05px, 89.86px, 0, 71.22px, 1px, 0);
+    }
+    .coin_4 {
+      @include coin-item(
+        clamp(2.5rem, 0.744rem + 7.81vw, 4.491rem),
+        clamp(2.813rem, 0.837rem + 8.78vw, 5.052rem),
+        0,
+        0,
+        clamp(0.868rem, 0.207rem + 2.94vw, 1.617rem),
+        58px
+      );
+    }
+  }
+}
+@media (max-width: 565px) {
+  .content {
+    height: 960px;
+    .block-content {
+      .block-text {
+        width: 323px;
+        .ol {
+          margin-left: 22px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .content {
+    height: 800px;
+    padding-top: 20px;
+    .block-content .block-text {
+      .ol {
+        margin-left: 19px;
+      }
+    }
+  }
+  .coin_2 {
+    @include coin-item(72px, 52px, 283px, -32px, 0, 0);
+  }
+  .coin_3 {
+    @include coin-item(
+      60px !important,
+      69px !important,
+      0,
+      -15px !important,
+      -32px !important,
+      0
+    );
+  }
+  .coin_4 {
+    @include coin-item(71.85px, 80.83px, 0, 0, 10px, 64.3px);
+  }
+}
